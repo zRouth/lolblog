@@ -1,10 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'shoulda-matchers'
-gem 'shoulda-context'
-gem 'bullet'
-gem 'capybara'
-gem 'rspec-rails'
+gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
@@ -36,14 +32,24 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
+group :development do
+
+  gem 'shoulda-matchers'
+  gem 'shoulda-context'
+  gem 'bullet'
+  gem 'capybara'
+  gem 'rspec-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  # Access an IRB console on exception pages or by using <%= console %> in views
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+end
+
+group :test do
+
 end
 
